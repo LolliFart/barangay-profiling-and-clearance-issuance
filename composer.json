@@ -1,0 +1,19 @@
+{
+    "name": "christian/finalbarangay",
+    "authors": [
+        {
+            "name": "christdao22",
+            "email": "christdao22@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Classes\\": "classes/"
+        }
+    },
+    
+    "require": {
+        "mpdf/mpdf": "^8.0"
+    }
+}
