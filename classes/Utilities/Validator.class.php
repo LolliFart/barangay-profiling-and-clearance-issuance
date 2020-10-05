@@ -335,34 +335,3 @@ class Validator{
 
 }
 
- 
-
-
-
-
-    // public function validate_search_key(){  
-    //     $this->validate_search_input();
-     
-    //     return $this->errors;
-    // }
-
-        // public function validate_name(){
-    //     $this->validate_text('firstname');
-    //     $this->validate_text('lastname');
-
-    //     return $this->errors;
-    // }
-
-    // public function validate_certification(){
-    //     $this->validate_text('lastname');
-    //     $this->validate_text('firstname');
-    //     $this->validate_text('middlename');
-    //     $this->validate_address('address');
-    //     $this->validate_select('civil_status');
-    //     $this->validate_select('purpose');
-
-    //     return $this->errors;
-
-    // }   
-
-    // tawagon nto sa transactions

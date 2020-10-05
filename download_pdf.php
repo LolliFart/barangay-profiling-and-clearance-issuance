@@ -12,8 +12,10 @@ if (isset($_GET['download']) && $_GET['download'] == "true") {
     if(!isset($_SESSION['pdf_filename'])){
         $_SESSION['pdf_filename'] = $data['lastname'] . '_' . rand(2000, 1200000) . '.pdf';
     }
+
     $data['pdf_filename'] = $_SESSION['pdf_filename'];
-    $data['fullname'] = $data['firstname'] . ' ' . substr($data['middlename'], 0, 1) . '.' . ' ' . $data['lastname'];
+    $middlename = !empty($data['middlename'])? strtoupper(substr($data['middlename'], 0, 1)) . '.' : '';
+    $data['fullname'] = $data['firstname'] . ' ' . $middlename . ' ' . $data['lastname'];
     generate_pdf($data);
 }
 

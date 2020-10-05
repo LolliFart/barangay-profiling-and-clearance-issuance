@@ -4,6 +4,8 @@
 function zip_upload_img($img){
 
     $zip = new ZipArchive();
+
+    
     $zip_name = "upload_zip_image/upload_" . time() . ".zip";
     
     // Create a zip target

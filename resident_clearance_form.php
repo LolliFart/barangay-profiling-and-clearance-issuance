@@ -133,12 +133,6 @@ include("includes/templates/nav.inc.php");
 
             <div class="row">
                 <div class="form-group col-lg-6">
-                    <label for="lastname"><b>Age <span class="text-danger">*</span></b></label>
-                    <input type="text" name="age" class="form-control"
-                        value="<?= isset($_POST['age']) ? sanitize($_POST['age']) : ''; ?>" required>
-                    <small class='text-danger'><?= $errors['age'] ?? ''?></small>
-                </div>
-                <div class="form-group col-lg-6">
                     <label for="civil_status"><b>Civil Status <span class="text-danger">*</span></b></label>
                     <select name="civil_status" class="form-control" required>
                         <option value=""></option>
@@ -157,23 +151,22 @@ include("includes/templates/nav.inc.php");
                     </select>
                     <psmall class='text-danger'><?= $errors['status'] ?? ''?></psmall>
                 </div>
-            </div>
-
-            <div class="row">
                 <div class="form-group col-lg-6">
                     <label for="address"><b>Address <span class="text-danger">*</span></b></label>
                     <input type="text" name="address" class="form-control"
                         value="<?= isset($_POST['address']) ? sanitize($_POST['address']) : ''; ?>" required>
                     <small class='text-danger'><?= $errors['address'] ?? ''?></small>
                 </div>
-                <div class="form-group col-lg-6">
+            </div>
+
+    
+                <div class="form-group">
                     <label for="purpose"><b>Purpose <span class="text-danger">*</span></b></label>
                     <input type="text" name="purpose" class="form-control"
                         value="<?= isset($_POST['purpose']) ? sanitize($_POST['purpose']) : ''; ?>" required>
                     <small class='text-danger'><?= $errors['purpose'] ?? ''?></small>
                 </div>
-            </div>
-
+        
 
             <div class="form-group">
                 <button class='btn btn-dark form-control' name='submit' value='submit'>Submit</button>

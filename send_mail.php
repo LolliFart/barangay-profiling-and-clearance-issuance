@@ -23,8 +23,9 @@ if(isset($_GET['confirm'])){
     $table = new RequestView();
     $result = $table->get_pending_request(sanitize($_GET['confirm']));
     
-    $_POST = $result->fetch_assoc();
-    $_POST['fullname'] = $_POST['res_fname'] . ' ' . substr( $_POST['res_mname'], 0, 1) . '.' . ' ' . $_POST['res_lname'];
+    $_POST = $result->fetch_assoc(); 
+    $middlename = !empty($_POST['middlename'])? strtoupper(substr($_POST['middlename'], 0, 1)) . '.' : '';
+    $_POST['fullname'] = $_POST['res_fname'] . ' ' . $middlename . ' ' . $_POST['res_lname'];
     $_POST['age'] = date_diff(date_create($_POST['res_DOB']), date_create('today'))->y;
 
     if(isset($_SESSION['since_year'])){
