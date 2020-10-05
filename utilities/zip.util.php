@@ -1,6 +1,12 @@
 
 <?php
 
+
+if(!file_exists(realpath("upload_zip_image"))){
+    mkdir("upload_zip_image");
+}
+
+
 function zip_upload_img($img){
 
     $zip = new ZipArchive();

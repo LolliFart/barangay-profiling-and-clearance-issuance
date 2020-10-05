@@ -8,6 +8,7 @@ require_once realpath("vendor/autoload.php");
 
 include("includes/templates/nav.inc.php");
 
+
 ?>
 <div style="height:100vh; display:flex; align-items:center;">
     <div style="height: 100%;">

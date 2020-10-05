@@ -1,6 +1,11 @@
 <?php
 use Mpdf\Mpdf;
 
+
+if(!file_exists(realpath("pdf"))){
+    mkdir("pdf");
+}
+
 function generate_pdf($data){
     include 'includes/clearance_template/' . $data['clearance_path_name'];
     $mpdf = new Mpdf(['mode' => 'utf-8', 'format' => [215.9, 356]]);

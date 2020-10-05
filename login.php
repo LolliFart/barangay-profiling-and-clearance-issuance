@@ -43,8 +43,7 @@ include("includes/templates/nav.inc.php");
         <div class="container" style="height: 100%;">
             <h2> <b>Admin Login</b> </h2>
             <p>Enter your username and password.</p>
-            
-             
+
             <form class="mt-5" action="<?= htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
 
                 <div class="form-group">
