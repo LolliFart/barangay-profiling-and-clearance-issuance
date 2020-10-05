@@ -51,11 +51,12 @@ include 'includes/templates/admin_nav.inc.php';
                             if($table->row_count != 0){
                                 $ctr = 0;
                                 while($row =  $result->fetch_assoc()){
+                                    $middlename = !empty($row['res_mname'])? strtoupper(substr($row['res_mname'], 0, 1)) . '.' : '';
                                     echo "<tr>
-        
+         
                                     <td>" . ++$ctr . "</td>
                                     <td hidden>" . $row['clearanceRequested_id'] . "</td>
-                                    <td>" . ucfirst($row['res_lname']) . ' ' . ucfirst($row['res_fname']) . ' ' . strtoupper(substr($row['res_fname'], 0, 1)) . '.' .  "</td>
+                                    <td>" . ucfirst($row['res_lname']) . ' ' . ucfirst($row['res_fname']) . ' ' . strtoupper($middlename) . "</td>
                                     <td>" . $row['res_gender'] . "</td>
                                     <td>" . $row['address'] . "</td>
                                     <td>" . $row['civil_status'] . "</td>

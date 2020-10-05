@@ -74,7 +74,7 @@ include 'includes/templates/admin_nav.inc.php';
                             <?= $_POST['clearance_id'] == '3'? "" : 'disabled' ?> required>
                         <small class="text-danger"><?= $error['since_year'] ?? ''?></small>
                     </div>
-
+ 
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for=""><b>Date Request: </b></label>
@@ -90,7 +90,8 @@ include 'includes/templates/admin_nav.inc.php';
                         <div class="form-group">
                             <label for=""><b>Fullname: </b></label>
                             <input type="text" name="fullname"
-                                value="<?= isset($_POST['fullname'])? $_POST['fullname'] :  $_POST['res_fname'] . ' ' . substr( $_POST['res_mname'], 0, 1) . '.' . ' ' . $_POST['res_lname'] ?>"
+                            
+                                value="<?= isset($_POST['fullname'])? $_POST['fullname'] :  $_POST['res_fname'] . ' ' . (!empty($_POST['middlename'])? strtoupper(substr($_POST['middlename'], 0, 1)) . '.' : '') . ' ' . $_POST['res_lname'] ?>"
                                 class="form-control" readonly>
                         </div>
                     </div>
