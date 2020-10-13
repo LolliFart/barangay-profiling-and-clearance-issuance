@@ -30,13 +30,16 @@ if(isset($_POST['confirm'])){
     if(isset($_POST['since_year'])){
         $_SESSION['since_year'] = $_POST['since_year'];
     }
-    header('location: send_mail.php?confirm=' . $_POST['clearanceRequested_id']); 
+    //header('location: send_mail.php?confirm=' . $_POST['clearanceRequested_id']); 
+    echo ("<script>location.href='send_mail.php?confirm=" . $_POST["clearanceRequested_id"] . "';</script>");
+    
 
 }
 
 if(isset($_POST['discard'])){
     unset( $_SESSION['pdf_name']);
-    header('location: send_mail.php?discard=' . $_POST['clearanceRequested_id']);
+    //header('location: send_mail.php?discard=' . $_POST['clearanceRequested_id']);
+    echo ("<script>location.href='send_mail.php?discard=" . $_POST["clearanceRequested_id"] . "';</script>");
 }
     
 include 'includes/templates/admin_nav.inc.php';

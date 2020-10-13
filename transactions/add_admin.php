@@ -24,8 +24,7 @@ if (isset($_POST['add'])) {
         } else {
             $add = new AdminController();
             $result = $add->add($data);
-            header("location:admin_accounts_record.php?message=" . $data['username'] . " successfully added");
-
+            echo ("<script>location.href='admin_accounts_record.php?message=" . $data['username'] . " successfully added" . "';</script>");
         }
     }
  

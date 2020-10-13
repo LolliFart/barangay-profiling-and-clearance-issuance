@@ -79,7 +79,7 @@ if(isset($_POST['send'])){
         if(unlink($_POST['file_upload_directory'])){
             unset($_SESSION['status']);
             unset( $_SESSION['pdf_name']);
-            header('location: clearance_pending.php'); 
+            echo ("<script>location.href='clearance_pending.php';</script>");
         }
 
     } else{

@@ -4,7 +4,7 @@ if (!isset($_SESSION)) {
 }
 
 if (sizeof($_GET) == 0 && sizeof($_POST) == 0) {
-    header('location:resident_records.php');
+    echo ("<script>location.href='resident_records.php';</script>");
 }
 
 include 'includes/templates/header.inc.php';
@@ -22,25 +22,7 @@ if (isset($_GET['resident_id'])) {
 }
 
 if (isset($_POST['submit'])) {
-
-
-    switch ($_POST['clearance_id']) {
-        case '1':
-            header('location:admin_clearance_form.php?clearance_id=' . $_POST['clearance_id'] . '');
-            break;
-        case '2':
-            header('location:admin_clearance_form.php?clearance_id=' . $_POST['clearance_id'] . '');
-            break;
-        case '3':
-            header('location:admin_clearance_form.php?clearance_id=' . $_POST['clearance_id'] . '');
-            break;
-        case '4':
-            header('location:admin_clearance_form.php?clearance_id=' . $_POST['clearance_id'] . '');
-            break;
-        case '5':
-            header('location:admin_clearance_form.php?clearance_id=' . $_POST['clearance_id'] . '');
-            break;
-    }
+    echo ("<script>location.href='admin_clearance_form.php?clearance_id=" . $_POST["clearance_id"] . "';</script>");
 }
 
 ?>

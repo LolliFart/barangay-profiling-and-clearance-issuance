@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
             $change = new AdminController();
             $change->update_username($data);
             unset($_POST['username']);
-            header("location:resident_records.php?message=You have successfully update your username");
+            echo ("<script>location.href='resident_records.php?message=You have successfully update your username';</script>");
         }
     } 
 }

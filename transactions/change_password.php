@@ -34,8 +34,8 @@ if (isset($_POST['submit'])) {
                 $test = true;
                 unset($_POST['oldpassword']);
                 unset($_POST['password']);
-                unset($_POST['repass']);\
-                header("location:resident_records.php?message=You have successfully update your password");
+                unset($_POST['repass']);
+                echo ("<script>location.href='resident_records.php?message=You have successfully update your password';</script>");
             }
         }
     }

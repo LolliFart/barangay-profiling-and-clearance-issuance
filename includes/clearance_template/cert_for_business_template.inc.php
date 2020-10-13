@@ -13,11 +13,9 @@ $located_at = $data['located'];
 $trade_name = $data['tradename'];
 $year_validity =  $data['year_validity'];
 $or_number = $data['or_number'];
-$amount_paid = substr($t, strlen($data['amount_paid'])-3, strlen($data['amount_paid'])) == '.00'? $data['amount_paid'] : $data['amount_paid'] . '.00';
-$garbage_fee =  substr($t, strlen($data['garbage_fee'])-3, strlen($data['garbage_fee'])) == '.00'? $data['garbage_fee'] : $data['garbage_fee'] . '.00';
+$amount_paid = substr($data['amount_paid'], strlen($data['amount_paid'])-3, strlen($data['amount_paid'])) == '.00'? $data['amount_paid'] : $data['amount_paid'] . '.00';
+$garbage_fee = substr($data['garbage_fee'], strlen($data['garbage_fee'])-3, strlen($data['garbage_fee'])) == '.00'? $data['garbage_fee'] : $data['garbage_fee'] . '.00';
  
-
-
 $html = '
 
 <!DOCTYPE html>
